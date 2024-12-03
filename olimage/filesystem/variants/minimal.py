@@ -69,7 +69,7 @@ class VariantMinimal(FileSystemBase):
         with Console("Generating boot files"):
             Setup.boot()
 
-        if env.objects['board'].arch == 'arm64':
+        if env.objects['board'].arch == 'x86':
             with Console("Installing ATF"):
                 Utils.shell.chroot('apt-get install -y arm-trusted-firmware-olinuxino')
 
